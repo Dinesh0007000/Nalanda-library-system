@@ -47,7 +47,7 @@ GraphQL: http://localhost:5000/graphql
 ```
 
 ## Testing the API
-API Documentation link::[link](https://documenter.getpostman.com/view/47838217/2sB3BLjnLJ)
+API Documentation link:[Postman Documentation link](https://documenter.getpostman.com/view/47838217/2sB3BLjnLJ)
 
 ## API Documentation
 ```
