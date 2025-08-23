@@ -18,8 +18,10 @@ It provides both **RESTful APIs** and **GraphQL APIs** to manage users, books, b
 1.Clone the Repository
 git clone https://github.com/Dinesh0007000/Nalanda-library-system
 cd Nalanda-library-system
+
 2.Install Dependencies
 npm install
+
 3.Configure Environment Variables
 Create a .env file in the project root with the following values:
 env
