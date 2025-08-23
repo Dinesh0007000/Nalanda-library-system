@@ -6,14 +6,14 @@ This is a backend system for the Nalanda Library Management System, developed us
 ## Setup Instructions
 Follow these steps to set up and run the application locally:
 ```
-1. **Clone the Repository**:
+1. ###Clone the Repository:
    git clone <https://github.com/Dinesh0007000/Nalanda-library-system>
    cd Nalanda-library-system
 
-2. **Install Dependencies**:
+2. ###Install Dependencies:
    npm install
 
-3.**Configure Environment Variables**:
+3.###Configure Environment Variables:
 
 Create a .env file in the root directory.
 Add the following variables:
@@ -33,7 +33,7 @@ JWE_ENCRYPTION_KEY=randombase64keyexample
 
 
 
-4.**Run the Application**:
+4.###Run the Application:
 npm run dev
 
 The server will start on http://localhost:5000, with GraphQL available at http://localhost:5000/graphql.
@@ -59,33 +59,33 @@ Includes request parameters, authentication details, and example responses.
 ```
 ##Features
 
-1.**User Management**:
+1.###User Management:
 
 Register users with name, email, and password.
 Login with email and password, returning a JWT token.
 Roles: Admin (single instance) and Member with role-based access.
 
 
-2.**Book Management**:
+2.###Book Management:
 
 Add, update, and delete books (Admin only).
 List books with pagination and filtering (all users).
 
 
-3.**Borrowing System**:
+3.###Borrowing System:
 
 Borrow and return books (Member only).
 View borrow history (Member only).
 
 
-4.**Reports and Aggregations**:
+4.###Reports and Aggregations:
 
 Most borrowed books (Admin only).
 Active members (Admin only, excludes Admins).
 Book availability summary (Admin only).
 
 
-5.**Authentication and Authorization**:
+5.###Authentication and Authorization:
 
 JWT with JWE encryption for secure token handling.
 Role-based access control using middleware and resolvers.
