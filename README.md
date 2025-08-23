@@ -112,9 +112,9 @@ MongoDB schemas with relationships & aggregation queries included
 
 ## Submission Details
 ```
-GitHub Repository:[Git repo](https://github.com/Dinesh0007000/Nalanda-library-system
+GitHub Repository:https://github.com/Dinesh0007000/Nalanda-library-system
 
-Postman API Document link :[link](https://documenter.getpostman.com/view/47838217/2sB3BLjnLJ)
+Postman API Document link :https://documenter.getpostman.com/view/47838217/2sB3BLjnLJ
 
 Notes: API docs are publicly accessible. Optional bonus tasks not implemented due to time constraints.
 ```
