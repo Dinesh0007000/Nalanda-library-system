@@ -1,6 +1,6 @@
-# 📚 Nalanda Library Management System – Backend
+# Nalanda Library Management System – Backend
 
-## 📖 Overview
+## Overview
 The **Nalanda Library Management System** is a backend application built with **Node.js, Express, MongoDB, and GraphQL**.  
 It provides both **RESTful APIs** and **GraphQL APIs** to manage users, books, borrowing operations, and generate reports.
 
@@ -11,59 +11,44 @@ It provides both **RESTful APIs** and **GraphQL APIs** to manage users, books, b
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 1️⃣ Clone the Repository
-```bash
+
+```
+1.Clone the Repository
 git clone https://github.com/Dinesh0007000/Nalanda-library-system
 cd Nalanda-library-system
-2️⃣ Install Dependencies
-bash
-Copy
-Edit
+2.Install Dependencies
 npm install
-3️⃣ Configure Environment Variables
+3.Configure Environment Variables
 Create a .env file in the project root with the following values:
-
 env
-Copy
-Edit
 PORT=5000
 MONGO_URI=<your-mongodb-connection-string>
 JWT_SECRET=<your-jwt-secret-key>
 JWE_ENCRYPTION_KEY=<32-byte-base64-encryption-key>
+
 Generate a secure 32-byte Base64 key for JWE_ENCRYPTION_KEY:
-
-bash
-Copy
-Edit
 node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
-Example .env:
 
+Example .env:
 env
-Copy
-Edit
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/nalanda
 JWT_SECRET=mysecretkey123
 JWE_ENCRYPTION_KEY=randombase64keyexample
-4️⃣ Run the Application
-bash
-Copy
-Edit
+
+4.Run the Application
 npm run dev
 Server: http://localhost:5000
-
 GraphQL: http://localhost:5000/graphql
+```
 
-🧪 Testing the API
-Import the Postman collection: tests/nalanda-tests.json
+## Testing the API
+API Documentation link::[link](https://documenter.getpostman.com/view/47838217/2sB3BLjnLJ)
 
-Import the Postman environment: tests/nalanda-env.json
-
-Run the 24 test cases to verify functionality.
-
-📘 API Documentation
+## API Documentation
+```
 REST Endpoints: /api/users, /api/books, etc.
 
 GraphQL Operations: listBooks, borrowBook, etc.
@@ -71,56 +56,66 @@ GraphQL Operations: listBooks, borrowBook, etc.
 Includes authentication details, request parameters, and example responses.
 
 Documentation is publicly accessible via the provided Postman link.
+```
 
-🚀 Features
-👤 User Management
+## Features
+### User Management
+```
 Register users with name, email, password
 
 Login with JWT token generation
 
 Roles: Admin (only one allowed) & Member
+```
 
-📚 Book Management
+### Book Management
+```
 Add, update, delete books (Admin only)
 
 List books with pagination & filtering (all users)
+```
 
-🔄 Borrowing System
+### Borrowing System
+```
 Borrow & return books (Members only)
 
 View borrow history (Members only)
+```
 
-📊 Reports & Aggregations
+### Reports & Aggregations
+
+```
 Most borrowed books (Admin)
 
 Active members (excluding Admins) (Admin)
 
 Book availability summary (Admin)
+```
 
-🔐 Authentication & Authorization
+### Authentication & Authorization
+```
 JWT with JWE encryption
 
 Role-based access control via middleware & resolvers
+```
 
-✅ Project Status
-✔️ All 24 Postman tests completed successfully
+## Project Status
+```
+All 24 Postman tests completed successfully
+Single Admin constraint enforced
+CRUD operations, authentication, and reports implemented
+Optional tasks (AWS deployment, BitBucket version control) not implemented
+MongoDB schemas with relationships & aggregation queries included
+```
 
-✔️ Single Admin constraint enforced
+## Submission Details
+```
+GitHub Repository:[Git repo](https://github.com/Dinesh0007000/Nalanda-library-system
 
-✔️ CRUD operations, authentication, and reports implemented
-
-❌ Optional tasks (AWS deployment, BitBucket version control) not implemented
-
-✔️ MongoDB schemas with relationships & aggregation queries included
-
-📂 Submission Details
-GitHub Repository: https://github.com/Dinesh0007000/Nalanda-library-system
-
-Postman Collection: tests/nalanda-tests.json
-
-Postman Environment: tests/nalanda-env.json
+Postman API Document link :[link](https://documenter.getpostman.com/view/47838217/2sB3BLjnLJ)
 
 Notes: API docs are publicly accessible. Optional bonus tasks not implemented due to time constraints.
+```
 
-🙏 Acknowledgments
+## Acknowledgments
 Special thanks to Huemn Interactive Private Limited for this opportunity.
