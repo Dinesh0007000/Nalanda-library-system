@@ -7,21 +7,18 @@ const connectDB = require('./config/db');
 const errorHandler = require('./utils/errorHandler');
 const jose = require('jose');
 const jwt = require('jsonwebtoken');
-const User = require('./models/User'); // Added to import User model
+const User = require('./models/User'); 
 
 const app = express();
 app.use(express.json());
 
-// Connect to DB
 connectDB();
 
-// REST Routes
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/books', require('./routes/bookRoutes'));
 app.use('/api/borrows', require('./routes/borrowRoutes'));
 app.use('/api/reports', require('./routes/reportRoutes'));
 
-// GraphQL Setup
 const server = new ApolloServer({
     typeDefs,
     resolvers,
@@ -36,7 +33,7 @@ const server = new ApolloServer({
                     const decodedToken = new TextDecoder().decode(plaintext);
                     const decoded = jwt.verify(decodedToken, process.env.JWT_SECRET);
                     // Fetch full user object to include role
-                    user = await User.findById(decoded.id); // Now defined
+                    user = await User.findById(decoded.id); 
                 } catch (err) {
                     console.error('Token decryption error:', err);
                 }
@@ -51,7 +48,6 @@ const server = new ApolloServer({
     server.applyMiddleware({ app });
 })();
 
-// Global Error Handler
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
