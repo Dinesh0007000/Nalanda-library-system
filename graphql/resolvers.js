@@ -5,7 +5,6 @@ const Borrow = require('../models/Borrow');
 const { generateToken } = require('../middleware/auth');
 const validator = require('validator');
 
-// Reuse aggregation logic
 const mostBorrowedBooksAgg = () => Borrow.aggregate([
     { $group: { _id: '$book', count: { $sum: 1 } } },
     { $sort: { count: -1 } },
