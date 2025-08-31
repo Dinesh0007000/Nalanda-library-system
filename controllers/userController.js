@@ -8,7 +8,6 @@ const register = async (req, res) => {
         return res.status(400).json({ message: 'Invalid input data' });
     }
     try {
-        // Check if an Admin already exists
         const existingAdmin = await User.findOne({ role: 'Admin' });
         if (role === 'Admin' && existingAdmin) {
             return res.status(400).json({ message: 'Only one Admin is allowed' });
